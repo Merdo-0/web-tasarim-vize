@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Blog - Bahri Mert İnceboy</title>
+  <meta name="description" content="Bahri Mert İnceboy teknik blog yazıları: Otomasyon, multimedya, animasyon ve yazılım geliştirme makaleleri.">
+  <meta name="keywords" content="Bahri Mert İnceboy, Blog, n8n, Adobe Animate, Photoshop, Yazılım, Akdeniz Üniversitesi">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    .blog-card {
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #ffffff;
+      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .blog-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(15, 23, 42, 0.1);
+    }
+    .blog-card-body {
+      padding: 1.5rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .blog-category {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #1e4356;
+      background-color: #e6f0f5;
+      padding: 4px 10px;
+      border-radius: 6px;
+      margin-bottom: 0.75rem;
+    }
+    .blog-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 0.75rem;
+    }
+    .blog-excerpt {
+      color: #475569;
+      font-size: 0.95rem;
+      line-height: 1.65;
+      margin-bottom: 1.25rem;
+      flex: 1;
+    }
+    .blog-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: auto;
+      padding-top: 1rem;
+      border-top: 1px solid #f1f5f9;
+    }
+    .blog-tag {
+      font-size: 0.78rem;
+      color: #64748b;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+    .blog-meta {
+      font-size: 0.82rem;
+      color: #94a3b8;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+
+<body class="blog-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h1 class="sitename">Bahri Mert</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="en/blog.html" style="color: rgb(255, 255, 255); font-weight: bold;">En</a></li>
+          <li><a href="index.html">Anasayfa</a></li>
+          <li><a href="hakkimda.html">Hakkımda</a></li>
+          <li><a href="projeler.html">Projeler</a></li>
+          <li><a href="Galeri.html">Galeri</a></li>
+          <li><a href="blog.html" class="active">Blog</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title dark-background">
+      <div class="container position-relative">
+        <h1>Blog</h1>
+        <p>Yazılım geliştirme, iş akışı otomasyonu ve dijital tasarım üzerine teknik notlar ve makaleler.</p>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Anasayfa</a></li>
+            <li class="current">Blog</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Blog Posts Section -->
+    <section id="blog-posts" class="section">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row gy-4">
+
+          <!-- Makale 1 -->
+          <div class="col-lg-4 col-md-6">
+            <article class="blog-card">
+              <div class="blog-card-body">
+                <div>
+                  <span class="blog-category">Otomasyon, Yazılım</span>
+                  <div class="blog-meta"><i class="bi bi-calendar3 me-1"></i> 12 Kasım 2026 &nbsp;|&nbsp; <i class="bi bi-person me-1"></i> Bahri Mert</div>
+                </div>
+                <h2 class="blog-title">n8n ile Kodsuz ve Düşük Kodlu İş Akışı Otomasyonu Kurulumu</h2>
+                <p class="blog-excerpt">
+                  Tekrarlayan veri aktarımı ve bildirim süreçlerini otomatikleştirmek için açık kaynaklı n8n platformu büyük avantaj sağlıyor. Webhook tetikleyicileri, HTTP Request düğümleri ve API entegrasyonları kullanarak kendi sunucumuzda nasıl uçtan uca otomasyon akışları kurabileceğimizi adım adım inceledim.
+                </p>
+                <div class="blog-tags">
+                  <span class="blog-tag">#n8n</span>
+                  <span class="blog-tag">#otomasyon</span>
+                  <span class="blog-tag">#workflow</span>
+                  <span class="blog-tag">#API</span>
+                </div>
+              </div>
+            </article>
+          </div><!-- End Makale 1 -->
+
+          <!-- Makale 2 -->
+          <div class="col-lg-4 col-md-6">
+            <article class="blog-card">
+              <div class="blog-card-body">
+                <div>
+                  <span class="blog-category">Multimedya, Animasyon</span>
+                  <div class="blog-meta"><i class="bi bi-calendar3 me-1"></i> 28 Ekim 2026 &nbsp;|&nbsp; <i class="bi bi-person me-1"></i> Bahri Mert</div>
+                </div>
+                <h2 class="blog-title">Adobe Animate ve ActionScript 3.0 ile İnteraktif Web Arayüzleri</h2>
+                <p class="blog-excerpt">
+                  Vektörel karakter hareketleri, motion guide (hareket kılavuzu) kullanımı ve sahneler arası geçişleri ActionScript 3.0 olay dinleyicileriyle kontrol etmek multimedya projelerine dinamizm katıyor. Etkileşimli sunum ve web portfolyo kurgusunda dikkat edilmesi gereken kare hızı ve optimizasyon ipuçları.
+                </p>
+                <div class="blog-tags">
+                  <span class="blog-tag">#Adobe</span>
+                  <span class="blog-tag">#Animate</span>
+                  <span class="blog-tag">#ActionScript3</span>
+                  <span class="blog-tag">#animasyon</span>
+                </div>
+              </div>
+            </article>
+          </div><!-- End Makale 2 -->
+
+          <!-- Makale 3 -->
+          <div class="col-lg-4 col-md-6">
+            <article class="blog-card">
+              <div class="blog-card-body">
+                <div>
+                  <span class="blog-category">Grafik Tasarım, Dijital Sanat</span>
+                  <div class="blog-meta"><i class="bi bi-calendar3 me-1"></i> 14 Ekim 2026 &nbsp;|&nbsp; <i class="bi bi-person me-1"></i> Bahri Mert</div>
+                </div>
+                <h2 class="blog-title">Adobe Photoshop'ta Smart Object ve Katman Bazlı Renklendirme</h2>
+                <p class="blog-excerpt">
+                  Görsel kaliteyi bozmadan ölçeklendirme yapabilmek için Smart Object (Akıllı Nesne) yapısı vazgeçilmezdir. Siyah-beyaz çizim ve manga panellerini katman maskeleri, Multiply harmanlama modları ve ışık-gölge katmanlarıyla nasıl profesyonelce renklendirebileceğinizi anlattım.
+                </p>
+                <div class="blog-tags">
+                  <span class="blog-tag">#Photoshop</span>
+                  <span class="blog-tag">#SmartObject</span>
+                  <span class="blog-tag">#grafiktasarım</span>
+                  <span class="blog-tag">#dijitalsanat</span>
+                </div>
+              </div>
+            </article>
+          </div><!-- End Makale 3 -->
+
+        </div>
+
+      </div>
+    </section><!-- /Blog Posts Section -->
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="d-flex align-items-center">
+            <span class="sitename">Bahri Mert</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>Akdeniz Üniversitesi</p>
+            <p>Antalya , Konyaaltı</p>
+            <p><strong>Email:</strong> <span>bahrimertinceboy8@gmail.com</span></p>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-3 footer-links"></div>
+        <div class="col-lg-2 col-md-3 footer-links"></div>
+        <div class="col-lg-4 col-md-12">
+          <h4>Beni takip et!</h4>
+          <p>Sosyal medya hesaplarımdan bana ulaşabilirsin.</p>
+          <div class="social-links d-flex">
+            <a href="https://www.instagram.com/bahri_mert10"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/bahri-mert-inceboy-39a66a24a/"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Moderna</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
