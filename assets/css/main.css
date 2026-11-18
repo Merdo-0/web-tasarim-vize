@@ -12,43 +12,43 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Raleway",  sans-serif;
-  --nav-font: "Poppins",  sans-serif;
+  --default-font: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --heading-font: "Space Grotesk", "Plus Jakarta Sans", sans-serif;
+  --nav-font: "Plus Jakarta Sans", sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #555555; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #1e4356; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #68a4c4; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --background-color: #f4f6fb; /* Background color for the entire website, including individual sections */
+  --default-color: #3e4a5e; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #0c1222; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #5b6cff; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #ffffff;  /* The default color of the main navmenu links */
-  --nav-hover-color: #68a4c4; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #555555; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #68a4c4; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-color: #f4f7ff;  /* The default color of the main navmenu links */
+  --nav-hover-color: #7dd3fc; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: rgba(10, 14, 28, 0.94); /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #101628; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #e8edf8; /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #7dd3fc; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
-  --background-color: #f4f8fb;
+  --background-color: #eef1f8;
   --surface-color: #ffffff;
 }
 
 .dark-background {
-  --background-color: #1e4356;
-  --default-color: #ffffff;
-  --heading-color: #ffffff;
-  --surface-color: #284e62;
+  --background-color: #070b16;
+  --default-color: #d5dcec;
+  --heading-color: #f8fafc;
+  --surface-color: #141b2e;
   --contrast-color: #ffffff;
 }
 
@@ -251,7 +251,7 @@ h6 {
 /* Global Header on Scroll
 ------------------------------*/
 .scrolled .header {
-  --background-color: #1e4356;
+  --background-color: rgba(7, 11, 22, 0.82);
 }
 
 /*--------------------------------------------------------------
@@ -2671,111 +2671,587 @@ section,
 
 
 /* ==============================================================
-   IMPECCABLE UI/UX MODERN TEMA & RENK PALETİ GÜNCELLEMESİ
+   Premium portfolio identity
+   Plus Jakarta Sans (body/nav) + Space Grotesk (headings)
 ============================================================== */
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
-
-:root {
-  --default-font: 'Plus Jakarta Sans', sans-serif !important;
-  --heading-font: 'Plus Jakarta Sans', sans-serif !important;
-  --accent-color: #0284c7 !important;
-  --surface-color: #ffffff !important;
-  --background-color: #f8fafc !important;
+body {
+  line-height: 1.7;
+  background-color: #f4f6fb;
+  background-image:
+    radial-gradient(920px 420px at 110% -80px, rgba(91, 108, 255, 0.1), transparent 58%),
+    radial-gradient(720px 380px at -140px 280px, rgba(34, 211, 238, 0.08), transparent 55%);
+  background-attachment: fixed;
 }
 
-body, p, a, li, span, input, textarea, button {
-  font-family: 'Plus Jakarta Sans', sans-serif !important;
+::selection {
+  background: rgba(91, 108, 255, 0.22);
+  color: #0c1222;
 }
 
-h1, h2, h3, h4, h5, h6, .sitename {
-  font-family: 'Plus Jakarta Sans', sans-serif !important;
-  letter-spacing: -0.025em !important;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.sitename,
+.page-title h1,
+.section-title h2 {
+  font-family: "Space Grotesk", "Plus Jakarta Sans", sans-serif;
+  letter-spacing: -0.04em;
 }
 
-/* Üst Menü, Hero ve Koyu Alanları Modern Gece Lacivertine Çekme */
-.header,
-.header.scrolled,
-.dark-background,
-#hero,
-.page-title,
-.footer {
-  background-color: #0f172a !important;
+.section-title h2::after {
+  width: 72px;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #5b6cff, #22d3ee);
 }
 
-/* Menü Aktif Link ve Hover Vurgusu */
+.section-title h2:before {
+  background: rgba(12, 18, 34, 0.1);
+}
+
+.section-title p {
+  max-width: 640px;
+  margin-inline: auto;
+  color: #5b6780;
+  font-size: 1.05rem;
+}
+
+/* Glass navigation */
+.header {
+  padding: 12px 0;
+  background: rgba(8, 12, 24, 0.42) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 40px rgba(2, 6, 23, 0.16);
+  backdrop-filter: blur(18px) saturate(1.5);
+  -webkit-backdrop-filter: blur(18px) saturate(1.5);
+}
+
+.scrolled .header {
+  background: rgba(7, 11, 22, 0.82) !important;
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+.header .logo h1 {
+  font-size: 1.55rem;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  background: linear-gradient(120deg, #ffffff 15%, #c7d2fe 52%, #67e8f9 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@media (min-width: 1200px) {
+  .navmenu a,
+  .navmenu a:focus {
+    font-size: 0.94rem;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    padding: 10px 14px;
+    border-radius: 999px;
+  }
+
+  .navmenu a.active,
+  .navmenu .active:focus {
+    color: #e0f2fe !important;
+    background: rgba(125, 211, 252, 0.14);
+  }
+}
+
 .navmenu a:hover,
 .navmenu .active,
 .navmenu .active:focus {
-  color: #38bdf8 !important;
+  color: #7dd3fc !important;
 }
 
-/* Hero Alanı Butonu ("Devamını oku") */
-#hero .btn-get-started {
-  background: linear-gradient(135deg, #0284c7 0%, #0ea5e9 100%) !important;
-  border: none !important;
-  color: #ffffff !important;
-  font-weight: 600 !important;
-  padding: 12px 32px !important;
-  box-shadow: 0 8px 20px rgba(2, 132, 199, 0.35) !important;
-  transition: all 0.3s ease !important;
+@media (max-width: 1199px) {
+  .navmenu ul {
+    background: rgba(10, 14, 28, 0.92);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 18px;
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+  }
 }
 
-#hero .btn-get-started:hover {
-  transform: translateY(-3px) !important;
-  box-shadow: 0 12px 25px rgba(14, 165, 233, 0.5) !important;
+/* Dark surfaces: hero, page titles, footer */
+.dark-background {
+  background-color: #070b16;
+  background-image:
+    radial-gradient(820px 380px at 8% 0%, rgba(91, 108, 255, 0.38), transparent 62%),
+    radial-gradient(640px 320px at 92% 18%, rgba(34, 211, 238, 0.2), transparent 58%),
+    linear-gradient(180deg, #070b16 0%, #0c1224 100%);
 }
 
-/* Bölüm Altı Çizgileri ve Vurgu Renkleri */
-.section-title h2::after {
-  background: #0284c7 !important;
+.hero {
+  min-height: 88vh;
+  background: transparent;
 }
 
-/* Tüm Kartlara Modern Glass/Elevation Görünümü */
-.featured-services .service-item,
-.contact .info-item,
-.portfolio .portfolio-content,
-.stats .stats-item,
-.blog-card,
-#home-projects .card {
-  background: #ffffff !important;
-  border-radius: 16px !important;
-  border: 1px solid #e2e8f0 !important;
-  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.06), 0 8px 10px -6px rgba(15, 23, 42, 0.04) !important;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+.hero::before,
+.hero::after {
+  display: none;
 }
 
-.featured-services .service-item:hover,
-.contact .info-item:hover,
-.portfolio .portfolio-content:hover,
-.blog-card:hover,
-#home-projects .card:hover {
-  transform: translateY(-6px) !important;
-  border-color: #bae6fd !important;
-  box-shadow: 0 20px 30px -10px rgba(2, 132, 199, 0.15) !important;
+.hero h2 {
+  font-size: clamp(2.5rem, 5.4vw, 4.5rem);
+  line-height: 1.05;
+  margin-bottom: 22px;
+  background: linear-gradient(120deg, #ffffff 8%, #dbe4ff 42%, #67e8f9 92%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
-/* Butonlar ve İkonlar */
+.hero p {
+  font-size: 1.08rem;
+  line-height: 1.75;
+  color: rgba(226, 232, 240, 0.82);
+}
+
+.page-title {
+  padding: 168px 0 88px;
+}
+
+.page-title:before {
+  background: linear-gradient(180deg, rgba(7, 11, 22, 0.05), rgba(7, 11, 22, 0.28));
+}
+
+.page-title h1 {
+  font-size: clamp(2.4rem, 4vw, 3.4rem);
+}
+
+.page-title p,
+.page-title .breadcrumbs ol {
+  color: rgba(226, 232, 240, 0.78);
+}
+
+.page-title .breadcrumbs a {
+  color: #c7d2fe;
+}
+
+#hero .btn-get-started,
 .btn-primary,
 .btn-outline-primary:hover,
-#scroll-top {
-  background-color: #0284c7 !important;
-  border-color: #0284c7 !important;
+#scroll-top,
+.contact form button[type="submit"] {
+  background: linear-gradient(135deg, #5b6cff 0%, #22d3ee 100%) !important;
+  border: none !important;
+  color: #ffffff !important;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  box-shadow: 0 12px 28px -12px rgba(91, 108, 255, 0.75);
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+#hero .btn-get-started:hover,
+.btn-primary:hover,
+.btn-outline-primary:hover,
+.contact form button[type="submit"]:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 34px -12px rgba(34, 211, 238, 0.65) !important;
   color: #ffffff !important;
 }
 
 .btn-outline-primary {
-  color: #0284c7 !important;
-  border-color: #0284c7 !important;
-  font-weight: 600 !important;
+  color: #3b46c4 !important;
+  border: 1px solid rgba(91, 108, 255, 0.45) !important;
+  background: rgba(255, 255, 255, 0.72) !important;
+  font-weight: 600;
+  backdrop-filter: blur(8px);
+}
+
+#scroll-top {
+  border-radius: 14px;
+}
+
+/* Home service cards overlap the hero slightly */
+.featured-services {
+  position: relative;
+  z-index: 4;
+  margin-top: -56px;
+  background: transparent;
+  --cyan-color: #22d3ee;
+  --orange-color: #f59e0b;
+  --teal-color: #5b6cff;
+  --red-color: #f43f5e;
+}
+
+.featured-services .service-item,
+.contact .info-item,
+.stats .stats-item,
+.blog-card,
+#home-projects .card,
+#home-gallery .overflow-hidden,
+.about .bg-light,
+.about blockquote {
+  background: rgba(255, 255, 255, 0.92) !important;
+  border-radius: 20px !important;
+  border: 1px solid rgba(15, 23, 42, 0.08) !important;
+  box-shadow: 0 18px 40px -28px rgba(12, 18, 34, 0.45) !important;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease, border-color 0.35s ease !important;
+}
+
+.featured-services .service-item {
+  padding: 36px 26px 32px;
+  overflow: hidden;
+}
+
+.featured-services .service-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 22px;
+  right: 22px;
+  height: 3px;
+  border-radius: 0 0 8px 8px;
+  background: linear-gradient(90deg, #5b6cff, #22d3ee);
+}
+
+.featured-services .service-item .icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
+}
+
+.featured-services .service-item:hover,
+.contact .info-item:hover,
+.stats .stats-item:hover,
+.blog-card:hover,
+#home-projects .card:hover,
+#home-gallery .overflow-hidden:hover {
+  transform: translateY(-8px);
+  border-color: rgba(91, 108, 255, 0.35) !important;
+  box-shadow: 0 28px 50px -24px rgba(91, 108, 255, 0.35) !important;
+}
+
+#home-projects .card img,
+#home-gallery img,
+.portfolio .portfolio-content img,
+.portfolio .portfolio-content video {
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+#home-projects .card:hover img,
+#home-gallery .overflow-hidden:hover img,
+.portfolio .portfolio-content:hover img,
+.portfolio .portfolio-content:hover video {
+  transform: scale(1.07);
+}
+
+#home-projects .card-title,
+.blog-title {
+  font-family: "Space Grotesk", "Plus Jakarta Sans", sans-serif;
+  letter-spacing: -0.03em;
+  color: #0c1222;
+}
+
+#home-projects .card-text,
+.blog-excerpt {
+  color: #5c6b82 !important;
+  line-height: 1.65;
+}
+
+/* Portfolio and gallery tiles */
+.portfolio .portfolio-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+.portfolio .portfolio-filters li {
+  margin: 0;
+  padding: 9px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  background: #ffffff;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #334155;
+  letter-spacing: -0.01em;
+}
+
+.portfolio .portfolio-filters li:hover,
+.portfolio .portfolio-filters li.filter-active {
+  color: #ffffff;
+  border-color: transparent;
+  background: linear-gradient(135deg, #5b6cff, #22d3ee);
+}
+
+.portfolio .portfolio-content {
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  background: #0c1222;
+  box-shadow: 0 18px 40px -28px rgba(12, 18, 34, 0.55);
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.portfolio .portfolio-content:hover {
+  transform: translateY(-8px);
+  border-color: rgba(91, 108, 255, 0.4);
+  box-shadow: 0 28px 50px -24px rgba(91, 108, 255, 0.4);
+}
+
+.portfolio .portfolio-content .portfolio-info {
+  background: linear-gradient(180deg, rgba(7, 11, 22, 0.15) 0%, rgba(7, 11, 22, 0.78) 100%);
+}
+
+.portfolio .portfolio-content .portfolio-info h4 {
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  font-family: "Space Grotesk", "Plus Jakarta Sans", sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.portfolio .portfolio-content .portfolio-info .preview-link,
+.portfolio .portfolio-content .portfolio-info .details-link {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  font-size: 18px;
+  line-height: 1;
+  top: calc(50% - 22px);
+}
+
+.portfolio .portfolio-content .portfolio-info .details-link {
+  font-size: 18px;
+}
+
+/* Skills */
+.skills .progress .skill {
+  text-transform: none;
+  letter-spacing: -0.02em;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.skills .progress-bar-wrap {
+  height: 8px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: rgba(12, 18, 34, 0.08);
+}
+
+.skills .progress-bar {
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #5b6cff 0%, #22d3ee 100%) !important;
+  box-shadow: 0 0 16px rgba(91, 108, 255, 0.45);
+}
+
+/* About, stats, contact, blog */
+.about img.img-fluid {
+  border-radius: 22px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 28px 50px -30px rgba(12, 18, 34, 0.6);
+}
+
+.about blockquote {
+  border-left: 3px solid #5b6cff !important;
+}
+
+.stats .stats-item {
+  padding: 28px 18px;
+}
+
+.stats .stats-item span {
+  font-family: "Space Grotesk", "Plus Jakarta Sans", sans-serif;
+  letter-spacing: -0.05em;
+  background: linear-gradient(120deg, #5b6cff, #0891b2);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .contact .info-item i {
-  color: #0284c7 !important;
-  border-color: #bae6fd !important;
-  background: #f0f9ff !important;
+  color: #5b6cff !important;
+  border: 1px solid rgba(91, 108, 255, 0.25) !important;
+  background: rgba(91, 108, 255, 0.08) !important;
+  border-radius: 16px !important;
 }
 
-/* Skill Bar (Yetenek Çubukları) Rengi */
-.skills .progress-bar {
-  background: linear-gradient(90deg, #0284c7 0%, #38bdf8 100%) !important;
+#contact form {
+  background: rgba(255, 255, 255, 0.94) !important;
+  border: 1px solid rgba(15, 23, 42, 0.08) !important;
+  border-radius: 22px !important;
+  box-shadow: 0 22px 48px -30px rgba(12, 18, 34, 0.45) !important;
+  padding: 28px !important;
+}
+
+#contact form .form-control {
+  border-radius: 12px;
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  padding: 12px 14px;
+  background: #f8fafc;
+  color: #0c1222;
+}
+
+#contact form .form-control:focus {
+  border-color: #5b6cff;
+  box-shadow: 0 0 0 4px rgba(91, 108, 255, 0.15);
+  background: #ffffff;
+}
+
+#contact iframe {
+  border-radius: 22px;
+  border: 1px solid rgba(15, 23, 42, 0.08) !important;
+  box-shadow: 0 18px 40px -28px rgba(12, 18, 34, 0.45);
+}
+
+.blog-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.blog-card-body {
+  padding: 1.5rem 1.5rem 1.35rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-category {
+  display: inline-block;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #3b46c4;
+  background: rgba(91, 108, 255, 0.1);
+  padding: 5px 10px;
+  border-radius: 999px;
+  margin-bottom: 0.75rem;
+}
+
+.blog-title {
+  font-size: 1.28rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.blog-excerpt {
+  font-size: 0.96rem;
+  margin-bottom: 1.25rem;
+  flex: 1;
+}
+
+.blog-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.blog-tag {
+  font-size: 0.78rem;
+  color: #52627a;
+  background: #f4f6fb;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  padding: 3px 8px;
+  border-radius: 999px;
+}
+
+.blog-meta {
+  font-size: 0.82rem;
+  color: #8b98ad;
+  margin-bottom: 0.5rem;
+}
+
+.footer .social-links a {
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.footer .social-links a:hover {
+  background: linear-gradient(135deg, #5b6cff, #22d3ee);
+  border-color: transparent;
+  color: #ffffff;
+}
+
+.footer .sitename {
+  font-size: 1.45rem;
+  font-weight: 700;
+}
+
+/* ==============================================================
+   ANASAYFA (#HERO) KOYU TEMA, YÜKSEKLİK VE KATMAN DÜZELTMESİ
+============================================================== */
+#hero,
+.hero,
+.index-page #hero,
+.index-page .hero {
+  background: radial-gradient(circle at 80% 20%, rgba(14, 165, 233, 0.22) 0%, rgba(15, 23, 42, 0.96) 45%, #070d19 100%) !important;
+  background-color: #070d19 !important;
+  color: #ffffff !important;
+  min-height: 62vh !important;
+  height: auto !important;
+  padding-top: 130px !important;
+  padding-bottom: 70px !important;
+  position: relative !important;
+  z-index: 1 !important;
+  overflow: hidden !important;
+}
+
+/* Açık zemin bırakan şablon katmanlarını temizle */
+#hero::before,
+#hero::after,
+.hero::before,
+.hero::after,
+#hero .carousel-item::before {
+  background: transparent !important;
+  opacity: 0 !important;
+}
+
+/* "Hoş Geldiniz / Welcome" Başlığını Netleştir */
+#hero h2,
+.hero h2 {
+  background: linear-gradient(90deg, #ffffff 0%, #38bdf8 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  text-shadow: none !important;
+  font-weight: 800 !important;
+}
+
+/* Alt Açıklama Metnini Okunur Yap */
+#hero p,
+.hero p {
+  color: #cbd5e1 !important;
+  opacity: 1 !important;
+  font-weight: 400 !important;
+}
+
+/* Alttaki Kartların Koyu Alanın Üstüne Binmesini Engelle ve Ferahlık Ver */
+.featured-services {
+  margin-top: 0 !important;
+  padding-top: 60px !important;
+  position: relative !important;
+  z-index: 2 !important;
+  background-color: #f8fafc !important;
+}
+
+/* Anasayfa Üst Menüsünü (Header) Netleştir */
+.index-page .header {
+  background-color: rgba(7, 13, 25, 0.85) !important;
+  backdrop-filter: blur(12px) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  z-index: 997 !important;
 }
